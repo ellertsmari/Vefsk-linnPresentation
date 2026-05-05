@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vefskólinn — An overview of the program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Scroll progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Animated background -->
+    <canvas id="bgCanvas"></canvas>
+    <div class="grid-overlay"></div>
+
+    <!-- Side navigation -->
+    <nav class="side-nav" id="sideNav">
+        <a href="#hero" class="nav-dot active" data-label="Intro"></a>
+        <a href="#who" class="nav-dot" data-label="Who"></a>
+        <a href="#history" class="nav-dot" data-label="History"></a>
+        <a href="#program" class="nav-dot" data-label="Program"></a>
+        <a href="#design" class="nav-dot" data-label="Design"></a>
+        <a href="#coding" class="nav-dot" data-label="Coding"></a>
+        <a href="#questions" class="nav-dot" data-label="Questions"></a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="section hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-tag">
+                <span class="dot dot-r"></span>
+                <span class="dot dot-y"></span>
+                <span class="dot dot-g"></span>
+                <span class="hero-tag-text">vefskolinn.sh</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="char-wrap" id="heroTitle">Vefskólinn</span>
+            </h1>
+            <p class="hero-sub">
+                <span class="bracket">&lt;</span>
+                <span class="typing" id="typing">An overview of the program</span>
+                <span class="caret">|</span>
+                <span class="bracket">/&gt;</span>
+            </p>
+            <div class="hero-meta">
+                <span class="meta-pill"><span class="pill-dot"></span> Est. 2015</span>
+                <span class="meta-pill">Hafnarfjörður, Iceland</span>
+                <span class="meta-pill">Code · Design · Community</span>
+            </div>
+            <div class="scroll-cue">
+                <span>scroll to begin</span>
+                <div class="cue-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO -->
+    <section class="section who" id="who">
+        <div class="container">
+            <header class="section-head">
+                <h2 class="section-title"><span class="b">&lt;</span> Who are we <span class="b">/&gt;</span></h2>
+                <div class="section-line"></div>
+            </header>
+
+            <figure class="who-photo reveal">
+                <img src="images/smari-jakub.jpg" alt="Smári and Jakub talking outside" loading="lazy" />
+                <figcaption><span class="b">//</span> Smári & Jakub</figcaption>
+            </figure>
+
+            <div class="who-grid">
+                <article class="person-card reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="avatar-frame">JK</span>
+                        <div>
+                            <h3>Jakub</h3>
+                            <p class="role">// design UI/UX & some code</p>
+                        </div>
+                    </div>
+                    <ul class="bullet-list">
+                        <li><span class="li-dot"></span>Has been here since 2022</li>
+                        <li><span class="li-dot"></span>Loves design, code, video games, music</li>
+                        <li><span class="li-dot"></span>Always trying new things</li>
+                        <li><span class="li-dot li-accent"></span>Former student of Vefskólinn</li>
+                    </ul>
+                    <div class="card-stat">
+                        <span class="stat-num" data-target="4">0</span>
+                        <span class="stat-lbl">years teaching</span>
+                    </div>
+                </article>
+
+                <article class="person-card reveal" data-tilt>
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="avatar-frame">SM</span>
+                        <div>
+                            <h3>Smári</h3>
+                            <p class="role">// code & technical stuff</p>
+                        </div>
+                    </div>
+                    <ul class="bullet-list">
+                        <li><span class="li-dot"></span>Has been here since 2015 — <em>since the beginning</em></li>
+                        <li><span class="li-dot"></span>Loves coding and web development</li>
+                        <li><span class="li-dot"></span>Anything to do with sitting and thinking</li>
+                    </ul>
+                    <div class="card-stat">
+                        <span class="stat-num" data-target="11">0</span>
+                        <span class="stat-lbl">years teaching</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="section history" id="history">
+        <div class="container">
+            <header class="section-head">
+                <h2 class="section-title"><span class="b">&lt;</span> History of Vefskólinn <span class="b">/&gt;</span></h2>
+                <div class="section-line"></div>
+            </header>
+
+            <div class="timeline">
+                <div class="timeline-axis"></div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2015</div>
+                    <div class="t-card has-img">
+                        <div class="t-img"><img src="images/history-2015.jpg" alt="Group photo from the early days of Vefskólinn" loading="lazy" /></div>
+                        <div class="t-body">
+                            <h4>The beginning</h4>
+                            <p>Vefskólinn is established in <strong>Vörðuskóli</strong>. Jonni and Davíð start the school with help from many specialists.</p>
+                            <span class="t-tag">founded</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2016</div>
+                    <div class="t-card">
+                        <h4>Stýrimannaskólinn — 3rd floor</h4>
+                        <p>Vefskólinn moves into a new home. <strong>Smári</strong> joins the school.</p>
+                        <span class="t-tag">moved</span>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2019</div>
+                    <div class="t-card">
+                        <h4>One floor up</h4>
+                        <p>Moved to the 4th floor of Stýrimannaskólinn.</p>
+                        <span class="t-tag">moved</span>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2020</div>
+                    <div class="t-card">
+                        <h4>Hafnarfjörður era</h4>
+                        <p>The school moves to Hafnarfjörður. The program is shortened from <strong>2 years to 1 year + a summer internship</strong>, and teaching shifts to <strong>English</strong>.</p>
+                        <span class="t-tag">redesigned</span>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2022</div>
+                    <div class="t-card">
+                        <h4>Jakub joins the force</h4>
+                        <p>A former student returns to teach design.</p>
+                        <span class="t-tag">team</span>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2023</div>
+                    <div class="t-card has-img">
+                        <div class="t-img"><img src="images/history-tenerife.jpg" alt="Vefskólinn students and teachers on Erasmus trip" loading="lazy" /></div>
+                        <div class="t-body">
+                            <h4>Erasmus partnership begins</h4>
+                            <p>Vefskólinn starts an Erasmus collaboration with <strong>Tech College</strong> in Aalborg, Denmark and <strong>I.E.S. El Rincón</strong>. The exchange has run every year since.</p>
+                            <span class="t-tag">erasmus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-item reveal">
+                    <div class="t-year">2025</div>
+                    <div class="t-card">
+                        <h4>Recognition</h4>
+                        <p>Vefskólinn receives the honorary award from <strong>SVEF</strong> (Samtök Vefiðnaðarins), and one of our students wins the <strong>Best Student Project</strong> award.</p>
+                        <span class="t-tag">awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="section program" id="program">
+        <div class="container">
+            <header class="section-head">
+                <h2 class="section-title"><span class="b">&lt;</span> The program <span class="b">/&gt;</span></h2>
+                <div class="section-line"></div>
+                <p class="section-lede">The study program of Vefskólinn is divided into <strong class="accent">8 modules</strong>.</p>
+            </header>
+
+            <div class="module-grid">
+                <article class="module-card reveal" style="--i:0">
+                    <div class="m-num">01</div>
+                    <h3>Intro to web dev</h3>
+                    <span class="m-len">2 weeks</span>
+                    <ul>
+                        <li>Basic guides in design and coding (HTML & CSS)</li>
+                        <li>One week group project</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:1">
+                    <div class="m-num">02</div>
+                    <h3>Community module</h3>
+                    <span class="m-len">all year</span>
+                    <ul>
+                        <li>Students work on this the whole time</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:2">
+                    <div class="m-num">03</div>
+                    <h3>Web dev basics</h3>
+                    <span class="m-len">+ 2-week project</span>
+                    <ul>
+                        <li>Introduction to JavaScript</li>
+                        <li>Introduction to UX and UI</li>
+                        <li>Two-week group project</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:3">
+                    <div class="m-num">04</div>
+                    <h3>External services</h3>
+                    <span class="m-len">+ 3-week project</span>
+                    <ul>
+                        <li>Introduction to JS frameworks</li>
+                        <li>Design thinking & responsive web</li>
+                        <li>Three-week group project</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:4">
+                    <div class="m-num">05</div>
+                    <h3>Back-end development</h3>
+                    <span class="m-len">2 + 2 weeks</span>
+                    <ul>
+                        <li>Guides for 2 weeks</li>
+                        <li>Group project for 2 weeks</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:5">
+                    <div class="m-num">06</div>
+                    <h3>Advanced topics</h3>
+                    <span class="m-len">+ 4-week project</span>
+                    <ul>
+                        <li>Combine everything you've learned in JS</li>
+                        <li>Advanced design thinking & deep UI</li>
+                        <li>Four-week group project</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal" style="--i:6">
+                    <div class="m-num">07</div>
+                    <h3>Specialization project</h3>
+                    <span class="m-len">solo</span>
+                    <ul>
+                        <li>Individual deep-dive on a topic of your choice</li>
+                    </ul>
+                </article>
+
+                <article class="module-card reveal highlight" style="--i:7">
+                    <div class="m-num">08</div>
+                    <h3>Internship</h3>
+                    <span class="m-len">12 weeks</span>
+                    <ul>
+                        <li>Real work in a real Icelandic agency</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section class="section design" id="design">
+        <div class="container">
+            <header class="section-head">
+                <h2 class="section-title"><span class="b">&lt;</span> Design <span class="b">/&gt;</span></h2>
+                <div class="section-line"></div>
+                <p class="section-lede">There are two aspects of design at Vefskólinn.</p>
+            </header>
+
+            <div class="duo-grid">
+                <article class="duo-card reveal" data-tilt>
+                    <div class="duo-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="32" r="24" />
+                            <path d="M16 32c0-8 7-14 16-14s16 6 16 14-7 14-16 14" />
+                            <circle cx="32" cy="32" r="4" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>UX <span class="acc">— User Experience</span></h3>
+                    <p>We focus on <strong>what the user experiences</strong> on our website. The flows, the friction, the feel.</p>
+                </article>
+
+                <article class="duo-card reveal" data-tilt>
+                    <div class="duo-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="12" width="48" height="36" rx="4" />
+                            <path d="M8 22h48" />
+                            <circle cx="14" cy="17" r="1.5" fill="currentColor"/>
+                            <circle cx="19" cy="17" r="1.5" fill="currentColor"/>
+                            <circle cx="24" cy="17" r="1.5" fill="currentColor"/>
+                            <path d="M16 30h22M16 36h28M16 42h16" />
+                        </svg>
+                    </div>
+                    <h3>UI <span class="acc">— User Interface</span></h3>
+                    <p>We focus on <strong>the visual aspects</strong> of our website. Colour, type, hierarchy, motion.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CODING -->
+    <section class="section coding" id="coding">
+        <div class="container">
+            <header class="section-head">
+                <h2 class="section-title"><span class="b">&lt;</span> Coding <span class="b">/&gt;</span></h2>
+                <div class="section-line"></div>
+            </header>
+
+            <div class="coding-wrap">
+                <div class="code-window reveal">
+                    <div class="code-bar">
+                        <span class="dot dot-r"></span>
+                        <span class="dot dot-y"></span>
+                        <span class="dot dot-g"></span>
+                        <span class="code-file">student.journey.js</span>
+                    </div>
+                    <pre class="code-body" id="codeBody"></pre>
+                </div>
+
+                <div class="coding-text reveal">
+                    <p class="big-quote">From <span class="zero">zero</span> to <span class="hero-w">hero</span> in web development.</p>
+                    <p>Starting with the basics and ending with everything you need to know to become a web developer in a typical web agency in Iceland.</p>
+                    <p>Companies that have hosted our interns agree on the strength of Vefskóli students:</p>
+                    <ul class="strength-list">
+                        <li><span class="check">✓</span> Strong soft-skills</li>
+                        <li><span class="check">✓</span> Know how to work in a team</li>
+                        <li><span class="check">✓</span> Can take a project from idea to solution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section class="section questions" id="questions">
+        <div class="q-inner">
+            <h2 class="q-title">
+                <span class="b big">&lt;</span>
+                <span class="q-text">Questions?</span>
+                <span class="b big">/&gt;</span>
+            </h2>
+            <div class="q-cursor"></div>
+            <p class="q-foot">Thank you for listening — Vefskólinn 2026</p>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                <path d="M6 6l12 12M6 18L18 6" />
+            </svg>
+        </button>
+        <figure class="lightbox-stage" id="lightboxStage">
+            <img id="lightboxImg" alt="" />
+            <figcaption id="lightboxCap"></figcaption>
+        </figure>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
